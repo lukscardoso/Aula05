@@ -3,11 +3,12 @@ import java.util.Scanner;
 
 public class TeacherHelper {
 
-	public static double horaAula=17.50;
+	//Public Static Final é um tipo Constante de variável... uma variavel para receber um valor fixo
+	//public static final double horaAula=17.50;
 	
 	public static void main(String[] args) {
 		int opcao=0, numeroAulas, qtdeAlunos, i;
-		double salarioBase, horaAtividade, descansoSemanalRemunerado, salario, notaAluno, mediaAlunos;
+		double salarioBase, horaAtividade, descansoSemanalRemunerado, salario, notaAluno, mediaAlunos, horaAula;
 		
 		Random gerador = new Random();
 		
@@ -28,6 +29,8 @@ public class TeacherHelper {
 				 * http://www1.sinprosp.org.br/guia_consultas.asp?mat=8*/
 				System.out.println("Para calcular seu salário base precisamos saber quantas aulas semanais o professor tem na instituição");
 				numeroAulas = leitor.nextInt();
+				System.out.println("Informe também o valor da hora-aula praticada na instituição");
+				horaAula = leitor.nextDouble();
 				salarioBase = numeroAulas * 4.5 * horaAula;
 				horaAtividade = salarioBase * 0.05;
 				descansoSemanalRemunerado = (salarioBase + horaAtividade) / 6;
